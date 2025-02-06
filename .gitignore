@@ -1,0 +1,8 @@
+# קבצי הגדרות וסודות
+.env
+secrets.json
+config.json
+Code.gs
+# מפתחות API
+**/apikey*
+**/api_key*

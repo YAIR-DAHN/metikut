@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מתיקות התורה - רישום</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- קישור לגופן מודרני -->
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-book-reader"></i>
+            </div>
+            <div class="header-content">
+                <h1>מתיקות התורה</h1>
+                <p>פרויקט לימוד גמרא פרק "המפקיד"</p>
+            </div>
+        </header>
+        
+        <div class="container">
+            <nav class="sidebar">
+                <ul>
+                    <li><a href="#registration"><i class="fas fa-user-plus"></i> רישום</a></li>
+                    <li><a href="#news"><i class="fas fa-newspaper"></i> חדשות ועדכונים</a></li>
+                    <li><a href="#materials"><i class="fas fa-book"></i> חומרי לימוד</a></li>
+                    <li><a href="#chat"><i class="fas fa-comments"></i> צ'אט עימנו</a></li>
+                </ul>
+            </nav>
+            <main class="main-content">
+                <section id="registration">
+                    <h2>טופס רישום</h2>
+                    <form id="registration-form">
+                        <label for="name">שם:</label>
+                        <input type="text" id="name" name="name" required>
+                        
+                        <label for="branchName">שם הסניף:</label>
+                        <input type="text" id="branchName" name="branchName" required>
+                        
+                        <label for="city">עיר:</label>
+                        <input type="text" id="city" name="city" required>
+                        
+                        <label for="branchPhone">טלפון הסניף:</label>
+                        <input type="tel" id="branchPhone" name="branchPhone" required>
+                        
+                        <label for="requiredBooklets">מספר חוברות נדרש:</label>
+                        <input type="number" id="requiredBooklets" name="requiredBooklets" required>
+                        
+                        <label for="numberOfAdolescents">כמות נערים:</label>
+                        <input type="number" id="numberOfAdolescents" name="numberOfAdolescents" required>
+                        
+                        <button type="submit">שלח</button>
+                    </form>
+                    <div id="registration-result"></div>
+                </section>
+
+                <section id="news">
+                    <h2>חדשות ועדכונים</h2>
+                    <div id="news-banner">
+                        <!-- דוגמה לעדכונים/חדשות -->
+                        <p>עדכון: מועד מבחן התקרב, אנא ודאו את הפרטים בטופס הרישום.</p>
+                    </div>
+                </section>
+
+                <section id="materials">
+                    <h2>חומרי לימוד</h2>
+                    <p>להורדת חומרי הלימוד:</p>
+                    <a href="materials.pdf" download>לחץ כאן להורדה</a>
+                </section>
+
+                <section id="chat">
+                    <h2>צ'אט עימנו</h2>
+                    <div id="chat-window">
+                        <!-- היסטוריית השיחה תופיע כאן -->
+                    </div>
+                    <form id="chat-form">
+                        <input type="text" id="chat-input" placeholder="שאל אותי שאלה על המיזם..." required>
+                        <button type="submit">שלח</button>
+                    </form>
+                </section>
+            </main>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
