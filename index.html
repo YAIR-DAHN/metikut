@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="he">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,49 +11,57 @@
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="page-wrapper">
         <header class="header">
-            <div class="logo">
-                <i class="fas fa-book-reader"></i>
+            <div class="brand">
+                <img src="./file/img/logo.png" alt="לוגו מתיקות התורה" class="brand-logo">
             </div>
+
+
             <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-book-reader"></i>
+                </div>
+                <div>
                 <h1>מתיקות התורה</h1>
-                <p>פרויקט לימוד גמרא פרק "המפקיד"</p>
+                <p>פרויקט לימוד גמרא פרק "המפקיד"</p></div>
             </div>
         </header>
-        
+
         <div class="container">
             <nav class="sidebar">
                 <ul>
-                    <li><a href="#registration"><i class="fas fa-user-plus"></i> רישום</a></li>
+                    <li><a href="#registration"><i class="fas fa-user-plus"></i> רישום סניפים</a></li>
                     <li><a href="#news"><i class="fas fa-newspaper"></i> חדשות ועדכונים</a></li>
                     <li><a href="#materials"><i class="fas fa-book"></i> חומרי לימוד</a></li>
-                    <li><a href="#chat"><i class="fas fa-comments"></i> צ'אט עימנו</a></li>
+                    <li><a href="#feedback"><i class="fas fa-clipboard-list"></i> משוב לרכזים</a></li>
+                    <li><a href="#chat"><i class="fas fa-comments"></i> שאלה לבוטי</a></li>
                 </ul>
-            </nav>
+            </nav>  
             <main class="main-content">
                 <section id="registration">
-                    <h2>טופס רישום</h2>
+                    <h2>טופס רישום סניף למיזם</h2>
                     <form id="registration-form">
                         <label for="name">שם:</label>
                         <input type="text" id="name" name="name" required>
-                        
+
                         <label for="branchName">שם הסניף:</label>
                         <input type="text" id="branchName" name="branchName" required>
-                        
+
                         <label for="city">עיר:</label>
                         <input type="text" id="city" name="city" required>
-                        
+
                         <label for="branchPhone">טלפון הסניף:</label>
                         <input type="tel" id="branchPhone" name="branchPhone" required>
-                        
+
                         <label for="requiredBooklets">מספר חוברות נדרש:</label>
                         <input type="number" id="requiredBooklets" name="requiredBooklets" required>
-                        
+
                         <label for="numberOfAdolescents">כמות נערים:</label>
                         <input type="number" id="numberOfAdolescents" name="numberOfAdolescents" required>
-                        
+
                         <button type="submit">שלח</button>
                     </form>
                     <div id="registration-result"></div>
@@ -68,18 +77,97 @@
 
                 <section id="materials">
                     <h2>חומרי לימוד</h2>
-                    <p>להורדת חומרי הלימוד:</p>
-                    <a href="materials.pdf" download>לחץ כאן להורדה</a>
+                    <div class="download-buttons">
+                        <a href="file/dock/hoveret.pdf" download class="download-button">
+                            <i class="fas fa-download"></i>
+                            הורד חוברת לימוד
+                        </a>
+                        <a href="file/dock/mashov.pdf" download class="download-button">
+                            <i class="fas fa-file-pdf"></i>
+                            הורד משוב רכזים
+                        </a>
+                    </div>
+                </section>
+
+                <section id="feedback">
+                    <h2>משוב לרכזים</h2>
+                    <div class="feedback-container">
+                        <div class="feedback-header">
+                            <h3>מיזם "מתיקות התורה" - לימוד פרק המפקיד תשפ"ה</h3>
+                            <p class="subtitle">אלפי נערים לומדים פרק אחד...</p>
+                        </div>
+                        
+                        <div class="feedback-section">
+                            <h4>1. המטרה והדרך</h4>
+                            <div class="goal">
+                                <h5>המטרה:</h5>
+                                <p>להכיר לנערים את לימוד הגמרא, מתוך הבנה ברורה, לגרום לנערים חיבור ללימוד הגמרא מתוך מתיקות התורה.</p>
+                            </div>
+                            <div class="method">
+                                <h5>הדרך:</h5>
+                                <p>לשם הלימוד, הופקה חוברת לימוד, שם יבואר לוח זמני הלימוד, הבאנו בתחילה הקדמה קצרה מה היא משנה / גמרא / תנא / אמורא, כדי לתת לנערים רקע ראשוני על הלימוד הגמרא, בנוסף בכל דף יש דף ביאור + דף עם שאלות אקטואליות, בסוף החוברת יש שאלות חזרה על כל עמוד.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feedback-section">
+                            <h4>2. לוח זמנים</h4>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <h5>חלוקת חוברות:</h5>
+                                    <p>החל מיום שלישי י"א בשבט (11.2)</p>
+                                </div>
+                                <div class="timeline-item">
+                                    <h5>תחילת הלימוד:</h5>
+                                    <p>שבוע לאחר מכן י"ח שבט (18.2) יום שלישי</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="feedback-section">
+                            <h4>3. מבחנים</h4>
+                            <ul class="exam-list">
+                                <li>כל רכז יערוך מבחנים שבועיים מידי שבוע לנערים בעל פה ע"י השאלות שצורפו בסוף החוברת</li>
+                                <li>יתקיימו מבחנים שבועיים ע"י הרובוט של אור ישראלי, כמו במבחנים הקדומים</li>
+                                <li>מידי שבוע תתקיים הגרלה על פרסים שווים</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="feedback-section">
+                            <h4>4-7. מידע חשוב נוסף</h4>
+                            <div class="info-cards">
+                                <div class="info-card">
+                                    <h5>רישום</h5>
+                                    <p>לא יתקיים רישום, כיון שהרישום יגביל צירוף נערים חדשים במהלך המיזם.</p>
+                                </div>
+                                <div class="info-card">
+                                    <h5>מעמד כבוד התורה</h5>
+                                    <p>מכל סניף יגיעו למעמד כל הנערים שהשתתפו במיזם. נערים נבחרים יבחנו ע"י גדולי ישראל שליט"א.</p>
+                                </div>
+                                <div class="info-card">
+                                    <h5>מטרת המיזם</h5>
+                                    <p>עיקר המיזם הוא הלימוד בסניפים, להכיר לנערים את לימוד הגמרא ומתיקות התורה.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="feedback-footer">
+                            <p class="signature">בהצלחה מרובה!</p>
+                            <p class="signature">הרב חיים פוקס</p>
+                            <p class="signature">הרכז הארצי</p>
+                        </div>
+                    </div>
                 </section>
 
                 <section id="chat">
-                    <h2>צ'אט עימנו</h2>
+                    <h2>בוטי - העוזר המלאכותי שיענה לכם על כל שאלה במיזם</h2>
                     <div id="chat-window">
                         <!-- היסטוריית השיחה תופיע כאן -->
                     </div>
                     <form id="chat-form">
                         <input type="text" id="chat-input" placeholder="שאל אותי שאלה על המיזם..." required>
-                        <button type="submit">שלח</button>
+                        <button title="submit" type="submit">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
                     </form>
                 </section>
             </main>
@@ -87,4 +175,5 @@
     </div>
     <script src="script.js"></script>
 </body>
-</html> 
+
+</html>

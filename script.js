@@ -1,4 +1,4 @@
-const scriptURL = 'https://script.google.com/macros/s/AKfycbzufOu4-9Z2ogZxDZaa6eSQySHEcoLxrqjBj1GGZWGcqugcLvtjUR4sOuxVU1zqVHqGbA/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyyX5EhgIDYKH3N0pvRiId5CUcH9tHMFdu0B9rq9c7fy49eAaeoYSf5pHhdOz8IaFE3Yg/exec';
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
         e.preventDefault();
         const chatInput = document.getElementById('chat-input');
         const userQuestion = chatInput.value;
+        if (!userQuestion.trim()) return; // לא לשלוח הודעות ריקות
         appendMessage('אתה: ' + userQuestion);
         chatInput.value = '';
 
@@ -48,23 +49,76 @@ document.addEventListener("DOMContentLoaded", function() {
         chatData.append('action', 'chat');
         chatData.append('question', userQuestion);
 
+        showTypingIndicator();
+
         fetch(scriptURL, { method: 'POST', body: chatData})
         .then(response => response.text())
         .then(data => {
+            hideTypingIndicator();
             appendMessage('בינה מלאכותית: ' + data);
         })
         .catch(error => {
+            hideTypingIndicator();
             appendMessage('ארעה שגיאה בעת יצירת התגובה.');
             console.error('Error!', error.message);
         });
     });
 
-    function appendMessage(message) {
+    // טעינת היסטוריית הצ'אט מהזיכרון המקומי
+    const chatHistory = JSON.parse(localStorage.getItem('chatHistory')) || [];
+    // מחיקת תוכן קיים לפני טעינת ההיסטוריה
+    document.getElementById('chat-window').innerHTML = '';
+    chatHistory.forEach(message => appendMessage(message, false));
+
+    function appendMessage(message, isNew = true) {
         const chatWindow = document.getElementById('chat-window');
-        const messageElem = document.createElement('p');
-        messageElem.innerText = message;
+        // הסרת אינדיקטור ההקלדה אם קיים
+        const existingIndicator = chatWindow.querySelector('.typing-indicator');
+        if (existingIndicator) {
+            existingIndicator.remove();
+        }
+
+        const messageElem = document.createElement('div');
+        const isUser = message.startsWith('אתה:');
+        messageElem.className = `chat-message ${isUser ? 'user' : 'ai'}`;
+        const bubble = document.createElement('div');
+        bubble.className = 'message-bubble';
+        bubble.innerText = message.replace('אתה: ', '').replace('בינה מלאכותית: ', '');
+        messageElem.appendChild(bubble);
+        
         chatWindow.appendChild(messageElem);
+
         chatWindow.scrollTop = chatWindow.scrollHeight;
+
+        // שמירת ההודעה בזיכרון המקומי רק אם זו הודעה חדשה
+        if (isNew) {
+            const updatedHistory = JSON.parse(localStorage.getItem('chatHistory')) || [];
+            updatedHistory.push(message);
+            localStorage.setItem('chatHistory', JSON.stringify(updatedHistory));
+        }
+    }
+
+    function showTypingIndicator() {
+        const chatWindow = document.getElementById('chat-window');
+        // יצירת אינדיקטור חדש
+        const typingIndicator = document.createElement('div');
+        typingIndicator.className = 'typing-indicator visible';
+        typingIndicator.innerHTML = `
+            <div class="dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        `;
+        chatWindow.appendChild(typingIndicator);
+    }
+
+    function hideTypingIndicator() {
+        const chatWindow = document.getElementById('chat-window');
+        const typingIndicator = chatWindow.querySelector('.typing-indicator');
+        if (typingIndicator) {
+            typingIndicator.remove();
+        }
     }
 
     function fetchNews() {
