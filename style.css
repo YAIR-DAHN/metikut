@@ -431,6 +431,7 @@ button:hover {
     .header {
         padding: 0.5rem;
         flex-wrap: wrap;
+        flex-direction: column
     }
 
     .brand {
@@ -441,7 +442,7 @@ button:hover {
     }
 
     .brand-logo {
-        height: 50px;
+        height: 80px;
         width: auto;
     }
 
@@ -462,6 +463,8 @@ button:hover {
         font-size: 1.8rem;
         padding: 0.6rem;
         margin: 0;
+        display: none;
+    
     }
 
     .sidebar {
@@ -575,7 +578,7 @@ button:hover {
     }
 
     .container > * {
-        margin-bottom: 1rem;
+        margin-bottom: 0rem;
     }
 
     .footer {
@@ -1301,8 +1304,8 @@ select option {
     content: "";
     height: 34px;
     width: 100px;
-    right: 3px;
-    bottom: 3px;
+    right: 5px;
+    bottom: 0px;
     background-color: white;
     transition: .4s;
     border-radius: 34px;
