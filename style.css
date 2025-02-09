@@ -220,6 +220,10 @@ section h2 {
     box-shadow: 0 0 0 3px rgba(26, 188, 156, 0.1);
 }
 
+#hasWhatsapp {
+    width: 20px;
+}
+
 button {
     margin-top: 1.5rem;
     padding: 1rem 2rem;
@@ -1237,5 +1241,125 @@ select option {
     
     .special-item span {
         text-align: right;
+    }
+}
+
+/* Checkbox Styles */
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+    padding: 0.8rem 1.2rem;
+    background: rgba(26, 188, 156, 0.05);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(26, 188, 156, 0.2);
+    transition: var(--transition);
+    justify-content: space-between;
+}
+
+.checkbox-wrapper:hover {
+    background: rgba(26, 188, 156, 0.1);
+    border-color: var(--secondary-color);
+}
+
+/* Toggle Switch Styles */
+.toggle-switch {
+    position: relative;
+    width: 200px;
+    height: 40px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-label {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e0e0e0;
+    transition: .4s;
+    border-radius: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+
+.toggle-yes {
+    color: transparent;
+}
+
+.toggle-label:before {
+    position: absolute;
+    content: "";
+    height: 34px;
+    width: 100px;
+    right: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 34px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #666;
+}
+
+.toggle-label:before {
+    content: "לא";
+}
+
+.toggle-switch input:checked + .toggle-label {
+    background-color: #1abc9c;
+}
+
+.toggle-switch input:checked + .toggle-label:before {
+    transform: translateX(-94px);
+    content: "כן";
+    color: #1abc9c;
+}
+
+.checkbox-wrapper label {
+    cursor: pointer;
+    margin: 0;
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+#secondPhoneWrapper {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    padding: 1.2rem;
+    background: rgba(231, 76, 60, 0.05);
+    border-radius: var(--border-radius);
+    border: 1px dashed rgba(231, 76, 60, 0.3);
+    animation: fadeIn 0.3s ease;
+}
+
+#secondPhoneWrapper label {
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 } 

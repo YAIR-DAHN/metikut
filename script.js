@@ -17,6 +17,30 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // שנו את הכתובת לכתובת ה-Web App שלכם בגוגל Apps Script
 
+    // טיפול בתיבת הסימון של וואטסאפ
+    const hasWhatsappCheckbox = document.getElementById('hasWhatsapp');
+    const secondPhoneWrapper = document.getElementById('secondPhoneWrapper');
+    const branchPhoneInput = document.getElementById('branchPhone');
+    const secondPhoneInput = document.getElementById('secondPhone');
+    
+    hasWhatsappCheckbox.addEventListener('change', function() {
+        secondPhoneWrapper.style.display = this.checked ? 'none' : 'block';
+        if (this.checked) {
+            // אם יש וואטסאפ, מעתיקים את המספר הראשי
+            secondPhoneInput.value = branchPhoneInput.value;
+        } else {
+            // אם אין וואטסאפ, מנקים את השדה
+            secondPhoneInput.value = '';
+        }
+    });
+    
+    // עדכון מספר הטלפון השני כשמשנים את המספר הראשי
+    branchPhoneInput.addEventListener('input', function() {
+        if (hasWhatsappCheckbox.checked) {
+            secondPhoneInput.value = this.value;
+        }
+    });
+
     // טיפול בטופס הרישום
     const registrationForm = document.getElementById('registration-form');
     registrationForm.addEventListener('submit', function(e) {

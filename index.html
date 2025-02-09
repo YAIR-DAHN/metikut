@@ -4,6 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="מיזם מתיקות התורה - לימוד פרק המפקיד בבא מציעא. רשמו את סניפכם עוד עכשיו למיזם ותהנו מחוויית לימוד.">
+    <meta property="og:title" content="מתיקות התורה - אור ישראלי">
+    <meta property="og:description" content="מיזם לימוד משותף של פרק המפקיד - כל הפרטים אודות המיזם במקום אחד">
+    <meta property="og:image" content="./file/img/logo.png">
+    <meta property="og:url" content="https://metikut.onrender.com/">
+    <meta name="theme-color" content="#1abc9c">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./file/img/logo.png">
+    <link rel="apple-touch-icon" href="./file/img/logo.png">
+    
     <title>מתיקות התורה - אור ישראלי</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -57,8 +68,21 @@
                         <label for="branchPhone">טלפון רב הסניף:</label>
                         <input type="tel" id="branchPhone" name="branchPhone" required>
 
-                        <label for="secondPhone">טלפון נוסף:</label>
-                        <input type="tel" id="secondPhone" name="secondPhone">
+                        <div class="checkbox-wrapper">
+                            <label for="hasWhatsapp">יש ווטסאפ על המספר הזה?</label>
+                            <div class="toggle-switch">
+                                <input type="checkbox" id="hasWhatsapp" name="hasWhatsapp" checked>
+                                <label for="hasWhatsapp" class="toggle-label">
+                                    <span class="toggle-yes">כן</span>
+                                    <span class="toggle-no">לא</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div id="secondPhoneWrapper" style="display: none;">
+                            <label for="secondPhone">נא להזין מספר טלפון נוסף שזמין בסניף שמקבל ווטסאפ (יכול להיות גם של אחד הנערים) :</label>
+                            <input type="tel" id="secondPhone" name="secondPhone">
+                        </div>
 
                         <label for="areaManager">רכז אזורי:</label>
                         <select id="areaManager" name="areaManager" required>
@@ -324,6 +348,7 @@
         </div>
         <div class="credits">
             <button id="showCredits" class="credits-btn">אתר זה נבנה ע"י y.d. systems</button>
+            <p><br><br></p>
         </div>
     </footer>
 
