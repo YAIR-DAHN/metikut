@@ -1,4 +1,4 @@
-const scriptURL = 'https://script.google.com/macros/s/AKfycbyyX5EhgIDYKH3N0pvRiId5CUcH9tHMFdu0B9rq9c7fy49eAaeoYSf5pHhdOz8IaFE3Yg/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxLfGihTVs6DZwijLFWMRy9AlxRXXgaBMKZF1CtD2GGrqmYprBjAFJ73ii4_3p-aonNEw/exec';
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -23,14 +23,45 @@ document.addEventListener("DOMContentLoaded", function() {
         e.preventDefault();
         const formData = new FormData(registrationForm);
         formData.append('action', 'register');
+        const submitButton = registrationForm.querySelector('button[type="submit"]');
+        submitButton.disabled = true;
+        submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> שולח...';
+        
         fetch(scriptURL, { method: 'POST', body: formData})
         .then(response => response.text())
         .then(data => {
-            document.getElementById('registration-result').innerText = data;
+            const resultDiv = document.getElementById('registration-result');
+            resultDiv.innerHTML = `
+                <div class="success-message">
+                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                    </svg>
+                    <span>${data}</span>
+                </div>
+            `;
             registrationForm.reset();
+            submitButton.disabled = false;
+            submitButton.innerHTML = 'שלח';
+            
+            // גלילה חלקה להודעת ההצלחה
+            resultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            // הסרת ההודעה אחרי 5 שניות
+            setTimeout(() => {
+                resultDiv.innerHTML = '';
+            }, 5000);
         })
         .catch(error => {
-            document.getElementById('registration-result').innerText = 'ארעה שגיאה, נסה שוב.';
+            const resultDiv = document.getElementById('registration-result');
+            resultDiv.innerHTML = `
+                <div class="success-message" style="background: var(--accent-color)">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span>ארעה שגיאה, נסה שוב.</span>
+                </div>
+            `;
+            submitButton.disabled = false;
+            submitButton.innerHTML = 'שלח';
             console.error('Error!', error.message);
         });
     });
@@ -268,4 +299,20 @@ document.addEventListener("DOMContentLoaded", function() {
             modal.style.display = "none";
         }
     }
+
+    // טיפול בלשוניות
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+    
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // הסרת הקלאס active מכל הלשוניות
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+            
+            // הוספת הקלאס active ללשונית הנבחרת
+            button.classList.add('active');
+            document.getElementById(`${button.dataset.tab}-tab`).classList.add('active');
+        });
+    });
 }); 
