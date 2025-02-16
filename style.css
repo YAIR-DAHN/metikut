@@ -699,13 +699,57 @@ button:hover {
 }
 
 /* Materials Section Styles */
+.materials-container {
+    display: grid;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.preview-container {
+    background: #fff;
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    box-shadow: var(--box-shadow);
+}
+
+.preview-container h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.book-preview {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.download-section {
+    background: #fff;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.download-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
 .download-buttons {
     display: flex;
     gap: 1rem;
     justify-content: center;
     margin-top: 2rem;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+}
+@media (max-width: 1080px) {
+    .download-buttons {
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+    }
 }
 
 .download-button {
@@ -857,6 +901,15 @@ button:hover {
 
     .modal-content {
         margin: 30% auto;
+    }
+
+    .materials-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .book-preview {
+        margin: 0 -1rem;
+        border-radius: 0;
     }
 }
 
@@ -1365,4 +1418,64 @@ select option {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* FAQ Styles */
+.faq-container {
+    display: grid;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.faq-item {
+    background: #fff;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: var(--transition);
+}
+
+.faq-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--box-shadow);
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.question-mark {
+    background: var(--secondary-color);
+    color: white;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.faq-answer {
+    padding-right: 2.5rem;
+    color: #666;
+}
+
+.answer-section {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-top: 0.5rem;
+}
+
+.answer-section ol {
+    padding-right: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.answer-section li {
+    margin-bottom: 0.5rem;
 } 

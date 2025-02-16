@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="מיזם מתיקות התורה - לימוד פרק המפקיד בבא מציעא. רשמו את סניפכם עוד עכשיו למיזם ותהנו מחוויית לימוד.">
+    <meta name="description"
+        content="מיזם מתיקות התורה - לימוד פרק המפקיד בבא מציעא. רשמו את סניפכם עוד עכשיו למיזם ותהנו מחוויית לימוד.">
     <meta property="og:title" content="מתיקות התורה - אור ישראלי">
     <meta property="og:description" content="מיזם לימוד משותף של פרק המפקיד - כל הפרטים אודות המיזם במקום אחד">
     <meta property="og:image" content="./file/img/logo.png">
@@ -13,11 +14,9 @@
     <meta name="theme-color" content="#1abc9c" media="(prefers-color-scheme: dark)">
     <meta name="msapplication-navbutton-color" content="#1abc9c">
     <meta name="apple-mobile-web-app-status-bar-style" content="#1abc9c">
-    
+
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="./file/img/logo.png">
-    <link rel="apple-touch-icon" href="./file/img/logo.png">
-    
+
     <title>מתיקות התורה - אור ישראלי</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -39,8 +38,9 @@
                     <i class="fas fa-book-reader"></i>
                 </div>
                 <div>
-                <h1>מתיקות התורה</h1>
-                <p>פרויקט לימוד גמרא פרק "המפקיד"</p></div>
+                    <h1>מתיקות התורה</h1>
+                    <p>פרויקט לימוד גמרא פרק "המפקיד"</p>
+                </div>
             </div>
         </header>
 
@@ -53,7 +53,7 @@
                     <li><a href="#feedback"><i class="fas fa-clipboard-list"></i> פרטים ומשוב</a></li>
                     <li><a href="#chat"><i class="fas fa-comments"></i> שאלה לבוטי</a></li>
                 </ul>
-            </nav>  
+            </nav>
             <main class="main-content">
                 <section id="registration">
                     <h2>טופס רישום סניף למיזם</h2>
@@ -65,7 +65,7 @@
                         <input type="text" id="city" name="city" required>
 
                         <label for="branchName">שם הסניף (במקרה שיש יותר מסניף אחד בעיר):</label>
-                        <input type="text" id="branchName" name="branchName" >
+                        <input type="text" id="branchName" name="branchName">
 
 
                         <label for="branchPhone">טלפון רב הסניף:</label>
@@ -83,7 +83,8 @@
                         </div>
 
                         <div id="secondPhoneWrapper" style="display: none;">
-                            <label for="secondPhone">נא להזין מספר טלפון נוסף שזמין בסניף שמקבל ווטסאפ (יכול להיות גם של אחד הנערים) :</label>
+                            <label for="secondPhone">נא להזין מספר טלפון נוסף שזמין בסניף שמקבל ווטסאפ (יכול להיות גם של
+                                אחד הנערים) :</label>
                             <input type="tel" id="secondPhone" name="secondPhone">
                         </div>
 
@@ -101,7 +102,7 @@
                         <input type="number" id="requiredBooklets" name="requiredBooklets" required>
 
                         <label for="numberOfAdolescents">כמות נערים:</label>
-                        <input type="number" id="numberOfAdolescents" name="numberOfAdolescents" >
+                        <input type="number" id="numberOfAdolescents" name="numberOfAdolescents">
 
                         <button type="submit">שלח</button>
                     </form>
@@ -112,26 +113,43 @@
                     <h2>חדשות ועדכונים</h2>
                     <div id="news-banner">
                         <!-- דוגמה לעדכונים/חדשות -->
-                         <h3>אנא המתן</h3>
+                        <h3>אנא המתן</h3>
                         <p>טוען עידכונים אחרונים...</p>
                     </div>
                 </section>
 
                 <section id="materials">
                     <h2>חומרי לימוד</h2>
-                    <div class="download-buttons">
-                        <a href="file/dock/hoveret_metikut_hatora.pdf"  class="download-button">
-                            <i class="fas fa-download"></i>
-                            הורד חוברת לימוד
-                        </a>
-                        <a href="file/dock/mashov.pdf" download class="download-button">
-                            <i class="fas fa-file-pdf"></i>
-                            הורד משוב רכזים
-                        </a>
-                        <a href="file/dock/milon_hamafkid.pdf" download class="download-button">
-                            <i class="fas fa-file-pdf"></i>
-                            הורד אוצר ביאורי מילים
-                        </a>
+                    <div class="materials-container">
+                        <div class="preview-container">
+                            <h3>תצוגה מקדימה של החוברת</h3>
+                            <div class="book-preview">
+                                <div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;">
+                                    <iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;"
+                                        src="https://online.fliphtml5.com/xaarn/yjiv/" seamless="seamless"
+                                        scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true">
+                                    </iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="download-section">
+                            <h3>הורדת קבצים</h3>
+                            <div class="download-buttons">
+                                <a href="file/dock/hoveret_metikut_hatora.pdf" class="download-button">
+                                    <i class="fas fa-download"></i>
+                                    הורד חוברת לימוד
+                                </a>
+                                <a href="file/dock/mashov.pdf" download class="download-button">
+                                    <i class="fas fa-file-pdf"></i>
+                                    הורד משוב רכזים
+                                </a>
+                                <a href="file/dock/milon_hamafkid.pdf" download class="download-button">
+                                    <i class="fas fa-file-pdf"></i>
+                                    הורד ביאורי מילים
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
@@ -141,28 +159,33 @@
                         <div class="tabs">
                             <button class="tab-button active" data-tab="feedback">משוב לרכזים</button>
                             <button class="tab-button" data-tab="schedule">לוח זמנים</button>
+                            <button class="tab-button" data-tab="faq">שו"ת לרכזים</button>
                             <button class="tab-button" data-tab="rules">תקנון</button>
                         </div>
-                        
+
                         <div class="tab-content active" id="feedback-tab">
                             <div class="feedback-container">
                                 <div class="feedback-header">
                                     <h3>מיזם "מתיקות התורה" - לימוד פרק המפקיד תשפ"ה</h3>
                                     <p class="subtitle">אלפי נערים לומדים פרק אחד...</p>
                                 </div>
-                                
+
                                 <div class="feedback-section">
                                     <h4>1. המטרה והדרך</h4>
                                     <div class="goal">
                                         <h5>המטרה:</h5>
-                                        <p>להכיר לנערים את לימוד הגמרא, מתוך הבנה ברורה, לגרום לנערים חיבור ללימוד הגמרא מתוך מתיקות התורה.</p>
+                                        <p>להכיר לנערים את לימוד הגמרא, מתוך הבנה ברורה, לגרום לנערים חיבור ללימוד הגמרא
+                                            מתוך מתיקות התורה.</p>
                                     </div>
                                     <div class="method">
                                         <h5>הדרך:</h5>
-                                        <p>לשם הלימוד, הופקה חוברת לימוד, שם יבואר לוח זמני הלימוד, הבאנו בתחילה הקדמה קצרה מה היא משנה / גמרא / תנא / אמורא, כדי לתת לנערים רקע ראשוני על הלימוד הגמרא, בנוסף בכל דף יש דף ביאור + דף עם שאלות אקטואליות, בסוף החוברת יש שאלות חזרה על כל עמוד.</p>
+                                        <p>לשם הלימוד, הופקה חוברת לימוד, שם יבואר לוח זמני הלימוד, הבאנו בתחילה הקדמה
+                                            קצרה מה היא משנה / גמרא / תנא / אמורא, כדי לתת לנערים רקע ראשוני על הלימוד
+                                            הגמרא, בנוסף בכל דף יש דף ביאור + דף עם שאלות אקטואליות, בסוף החוברת יש
+                                            שאלות חזרה על כל עמוד.</p>
                                     </div>
                                 </div>
-                                
+
                                 <div class="feedback-section">
                                     <h4>2. לוח זמנים</h4>
                                     <div class="timeline">
@@ -176,16 +199,17 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="feedback-section">
                                     <h4>3. מבחנים</h4>
                                     <ul class="exam-list">
-                                        <li>כל רכז יערוך מבחנים שבועיים מידי שבוע לנערים בעל פה ע"י השאלות שצורפו בסוף החוברת</li>
+                                        <li>כל רכז יערוך מבחנים שבועיים מידי שבוע לנערים בעל פה ע"י השאלות שצורפו בסוף
+                                            החוברת</li>
                                         <li>יתקיימו מבחנים שבועיים ע"י הרובוט של אור ישראלי, כמו במבחנים הקדומים</li>
                                         <li>מידי שבוע תתקיים הגרלה על פרסים שווים</li>
                                     </ul>
                                 </div>
-                                
+
                                 <div class="feedback-section">
                                     <h4>4-7. מידע חשוב נוסף</h4>
                                     <div class="info-cards">
@@ -195,15 +219,17 @@
                                         </div>
                                         <div class="info-card">
                                             <h5>מעמד כבוד התורה</h5>
-                                            <p>מכל סניף יגיעו למעמד כל הנערים שהשתתפו במיזם. נערים נבחרים יבחנו ע"י גדולי ישראל שליט"א.</p>
+                                            <p>מכל סניף יגיעו למעמד כל הנערים שהשתתפו במיזם. נערים נבחרים יבחנו ע"י
+                                                גדולי ישראל שליט"א.</p>
                                         </div>
                                         <div class="info-card">
                                             <h5>מטרת המיזם</h5>
-                                            <p>עיקר המיזם הוא הלימוד בסניפים, להכיר לנערים את לימוד הגמרא ומתיקות התורה.</p>
+                                            <p>עיקר המיזם הוא הלימוד בסניפים, להכיר לנערים את לימוד הגמרא ומתיקות התורה.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="feedback-footer">
                                     <p class="signature">בהצלחה מרובה!</p>
                                     <p class="signature">הרב חיים פוקס</p>
@@ -211,7 +237,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="tab-content" id="schedule-tab">
                             <div class="schedule-container">
                                 <div class="schedule-note">
@@ -265,12 +291,14 @@
                                     </div>
                                     <div class="schedule-item special-item">
                                         <span>יום שני י"ד אייר [12.5] – יום שני כ"ז אייר [25.5]</span>
-                                        <span>חזרות על כל החומר. בחורים שיעלו להיבחן בע"פ ע"י גדולי ישראל יקבלו חומר עיון נוסף ביום שני י"ד (12.5). המבחן המקדים בסניפים ביום שלישי כ"ט אייר (27.5)</span>
+                                        <span>חזרות על כל החומר. בחורים שיעלו להיבחן בע"פ ע"י גדולי ישראל יקבלו חומר
+                                            עיון נוסף ביום שני י"ד (12.5). המבחן המקדים בסניפים ביום שלישי כ"ט אייר
+                                            (27.5)</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="tab-content" id="rules-tab">
                             <div class="rules-container">
                                 <div class="rule-section">
@@ -285,11 +313,16 @@
 
                                 <div class="rule-section">
                                     <h4>מבחנים שבועיים</h4>
-                                    <p>כל שבוע יתקיים מבחן על השאלות נמצאות בסוף החוברת, המבחן יתקיים ע"י ה"בוט" של "אור ישראלי". הקישור ישלח לרכז בסניף, במידה ואין לרכז טלפון תומך ניתן ליצור קשר ע"י אחד הנערים והוא יעביר לכל הנערים בסניף.</p>
-                                    <p>כל רכז יערוך מבחנים לנערים בסניף (שאלות בע"פ לחידוד). סניפים שיראו לנכון שנגיע לערוך מבחן בע"פ נושא פרסים לעודד את הנערים, יוכלו לפנות:</p>
+                                    <p>כל שבוע יתקיים מבחן על השאלות נמצאות בסוף החוברת, המבחן יתקיים ע"י ה"בוט" של "אור
+                                        ישראלי". הקישור ישלח לרכז בסניף, במידה ואין לרכז טלפון תומך ניתן ליצור קשר ע"י
+                                        אחד הנערים והוא יעביר לכל הנערים בסניף.</p>
+                                    <p>כל רכז יערוך מבחנים לנערים בסניף (שאלות בע"פ לחידוד). סניפים שיראו לנכון שנגיע
+                                        לערוך מבחן בע"פ נושא פרסים לעודד את הנערים, יוכלו לפנות:</p>
                                     <div class="contact-buttons">
-                                        <a href="https://wa.me/972583730000" class="contact-button"><i class="fab fa-whatsapp"></i> 058-373-0000</a>
-                                        <a href="tel:0548473336" class="contact-button"><i class="fas fa-phone"></i> 054-847-3336</a>
+                                        <a href="https://wa.me/972583730000" class="contact-button"><i
+                                                class="fab fa-whatsapp"></i> 058-373-0000</a>
+                                        <a href="tel:0548473336" class="contact-button"><i class="fas fa-phone"></i>
+                                            054-847-3336</a>
                                     </div>
                                 </div>
 
@@ -312,10 +345,114 @@
                                     <h4>שעות מענה לשאלות</h4>
                                     <p>בכל יום בין השעות 18:00 - 21:00 יהיה מענה לשאלות בגמרא:</p>
                                     <div class="contact-buttons">
-                                        <a href="tel:0548473336" class="contact-button"><i class="fas fa-phone"></i> 054-847-3336</a>
+                                        <a href="tel:0548473336" class="contact-button"><i class="fas fa-phone"></i>
+                                            054-847-3336</a>
                                         <p class="contact-note">באין מענה נחזור בהקדם [שיחה קולית]</p>
-                                        <a href="https://wa.me/972583730000" class="contact-button"><i class="fab fa-whatsapp"></i> 058-373-0000</a>
+                                        <a href="https://wa.me/972583730000" class="contact-button"><i
+                                                class="fab fa-whatsapp"></i> 058-373-0000</a>
                                         <p class="contact-note">לשאלה בווטסאפ יש לשלוח עם המילה "שאלה"</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="faq-tab">
+                            <div class="faq-container">
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <span class="question-mark">?</span>
+                                        <h4>למי מיזם זה מיועד?</h4>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p>המיזם מיועד לכל הנערים ללא הגבלת גיל גם בוגרים.</p>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <span class="question-mark">?</span>
+                                        <h4>האם צריך להירשם?</h4>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p>אין צריך להירשם, כדי שנוכל לצרף בחורים בכל שלב, אפילו באמצע החומר.</p>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <span class="question-mark">?</span>
+                                        <h4>האם חובה לעמוד בהספק השבועי?</h4>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <div class="answer-section">
+                                            <p>התשובה מחולקת לשנים:</p>
+                                            <ol>
+                                                <li>בכל סניף הרכז מצד אחד יצרף בחורים בכל שלב אפילו באמצע החומר העיקר
+                                                    שירגישו את ויטעמו את לימוד דף הגמרא ויכנס בהם "מתיקות התורה".</li>
+                                                <li>נערים שאנו יודעים שיש בכוחם לעמוד בהספק של עמוד שבועי, המטרה לקדם את
+                                                    אותם נערים ולהשקיע בהם לעמוד בהספק השבועי, ולהבחן מידי שבוע, ובעז"ה
+                                                    להבחן במעמד כבוד התורה ע"י גדולי ישראל.</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <span class="question-mark">?</span>
+                                        <h4>איך יתקיימו המבחנים השבועיים?</h4>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p>מידי יום שלישי בשבוע, או רביעי לפי הפעילות בסניפים נשלח קישור לרכז או לאחד
+                                            הנערים, שם יהיו מספר שאלות על אותו עמוד שבועי. מי שקיבל את הקישור יעביר אותו
+                                            לשאר הנערים בסניף.</p>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <span class="question-mark">?</span>
+                                        <h4>ביאורי המילים והשאלות האקטואליות שנמצאות בחוברת האם יתקיים מבחן גם עליהם?
+                                        </h4>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p>המבחן הוא רק על השאלות על הגמרא בלבד, השאלות נמצאות בסוף החוברת.</p>
+                                    </div>
+                                </div>
+
+
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <span class="question-mark">?</span>
+                                        <h4>האם יהיו פרסים לבחורים שישתתפו במבחנים?</h4>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p>מידי שבוע תתקיים הגרלה על פרסים שווים.</p>
+                                    </div>
+                                </div>
+
+
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <span class="question-mark">?</span>
+                                        <h4>הזכירו מעמד עם גדולי ישראל, מה מדובר, והאם יהיה חתן איך הדברים יתבצעו?</h4>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p>אי"ה המטרה שאותם נערים שעמדו בהספק השבועי יגיעו להבחן על ידי גדולי ישראל, כאן
+                                            אין חתן ומספר הנערים אינו מוגבל. [כאן כמבואר בתקנון ההשתתפות היא עד כיתה י"ב
+                                            כולל י"ב].</p>
+                                    </div>
+                                </div>
+
+
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <span class="question-mark">?</span>
+                                        <h4>מה עם אותם שלא יעמדו ביעדים, או בוגרים מעל כיתה י"ב?</h4>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p>גם אותם נערים המטרה היא להביא גם אותם למעמד כבוד התורה, גם להם יתקיים מבחן
+                                            בכתב נושא פרסים שווים.</p>
                                     </div>
                                 </div>
                             </div>
