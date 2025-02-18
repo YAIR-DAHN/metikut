@@ -23,6 +23,7 @@
     <!-- קישור לגופן מודרני -->
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
@@ -120,7 +121,7 @@
 
                 <section id="materials">
                     <h2>חומרי לימוד</h2>
-                    <div class="materials-container">
+                    <!-- <div class="materials-container">
                         <div class="preview-container">
                             <h3>תצוגה מקדימה של החוברת</h3>
                             <div class="book-preview">
@@ -130,6 +131,26 @@
                                         scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true">
                                     </iframe>
                                 </div>
+                            </div>
+                        </div> -->
+
+
+                        <div class="book-viewer-container">
+                            <h3 class="viewer-title">
+                                <span class="material-icons">menu_book</span>
+                                צפייה בחוברת
+                            </h3>
+                            <div class="book-viewer">
+                                <iframe 
+                                    id="bookFrame"
+                                    src="turn.js/hoveret/hoveret.html"
+                                    frameborder="0"
+                                    allowfullscreen
+                                    title="חוברת מתיקות התורה">
+                                </iframe>
+                                <!-- <button class="expand-button" onclick="expandViewer()">
+                                    <span class="material-icons">open_in_full</span>
+                                </button> -->
                             </div>
                         </div>
 
